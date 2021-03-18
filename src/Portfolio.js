@@ -16,10 +16,10 @@ export default function Portfolio () {
             <h2>Jquery color slaider</h2>
             <img src={jqSlaider} alt='photo of the project'></img>
             <p className="projects__discription">
-              Описание: Было интересно посмотреть как такие слайдеры делаются на jquery
+              Описание: Было интересно посмотреть как такие слайдеры создаются на jquery
             </p>
             <a className="project__link" href="https://alexeykarpunin.github.io/jquery-color-slaider/" target="_blank" rel="noreferrer">
-              Ссылка на прект: Jquery color slaider.
+              Ссылка на проект: Jquery color slaider.
             </a>
             <br />
             <a className="project__link" href="https://github.com/AlexeyKarpunin/jquery-color-slaider" target="_blank" rel="noreferrer">
@@ -32,12 +32,12 @@ export default function Portfolio () {
             <img src={table} alt='photo of the project'></img>
             <p className="projects__discription">
               Описание: Было тестовым задание в компанию. Задача заключалось в том, что бы
-              сделать таблицу на 50 строк, используя react, и у столбцо была возможность сортировки.
-              Так же у пользователя жолжна быть возможность создавать новые листы.
-              (так же в этом проекте я использовал styled-components)
+              сделать таблицу на 50 строк, используя react, и у столбцы была возможность сортировки.
+              Так же у пользователя должна быть возможность создавать новые листы
+              (так же в этом проекте я использовал styled-components).
             </p>
             <a className="project__link" href="https://alexeykarpunin.github.io/Crazy-Panda-table-task/" target="_blank" rel="noreferrer">
-              Ссылка на прект: Таблица.
+              Ссылка на проект: Таблица.
             </a>
             <br/>
             <a className="project__link" href="https://github.com/AlexeyKarpunin/Crazy-Panda-table-task" target="_blank" rel="noreferrer">
@@ -48,11 +48,11 @@ export default function Portfolio () {
             <h2>MemojiGame</h2>
             <img src={memo} alt='photo of the project'></img>
             <p className="projects__discription">
-              Финальный проект пройденных мной курсов на портале Coursera,
-              Перписанный с чистого js на react и собранного при помощи webpack.
+              Описание: Финальный проект пройденных мной курсов на портале Coursera,
+              Переписанный с чистого js на react и собранный при помощи webpack.
             </p>
             <a className="project__link" href="https://alexeykarpunin.github.io/memoji-game/" target="_blank" rel="noreferrer" >
-              Ссылка на прект: Мемоджи.
+              Ссылка на проект: Мемоджи.
             </a>
             <br/>
             <a className="project__link" href="https://github.com/AlexeyKarpunin/memoji-game" target="_blank" rel="noreferrer" >
