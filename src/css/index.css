@@ -1,0 +1,348 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: GardensC, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a:hover {
+  color: rgb(0, 0, 255);
+}
+
+h1,h2 {
+  font-size: 26px;
+  text-align: center;
+}
+
+.section__header {
+  text-align: center;
+  max-width: 280px;
+  font-size: 36px;
+  margin: 0 auto;
+}
+
+.section__header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(245, 198, 198)
+}
+
+a {
+  color: #000;
+  text-decoration: none
+}
+
+
+.section {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+}
+
+.section-skills {
+  background: url('../img/space.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.section-for-hi-slaider {
+  position: relative;
+  z-index: 99;
+}
+
+.section-content {
+  position: relative;
+  height: 100vh;
+  z-index: -1;
+}
+
+.section-relative {
+  position: relative;
+  padding: 100px 0 50px 0;
+  min-height: 100vh;
+}
+
+
+.hi-slaider {
+  position: absolute;
+  top: -1000px;
+  width: 100%;
+  transition: 1s;
+  background: url('../img/hi-background.jpg') no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hi-slaider_active {
+  top: 0;
+}
+
+.hi-slaider__info {
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hi-slaider__header {
+  font-size: 46px;
+  font-weight: 900;
+  transition: 1s;
+  text-align: center;
+  color: #c49af1;
+  margin: 0;
+}
+
+.hi-slaider__header_active {
+  color: #ff9e1f;
+}
+
+.slaider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.slaider__item {
+  white-space: nowrap;
+  transition: 1s;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 106px;
+}
+
+.slaider__item:hover {
+  cursor: pointer;
+  color: rgba(104, 104, 226, 0.5);
+}
+
+.slaider__item_active {
+  transform: scale(1);
+}
+
+.slaider__item_shadow {
+  transform: scale(.5);
+  opacity: .5;
+}
+
+@-webkit-keyframes blink_btn { 0% { opacity: .1; } 50% { opacity: 1; } 100% { opacity: .1; } }
+   @-moz-keyframes blink_btn { 0% { opacity: .1; } 50% { opacity: 1; } 100% { opacity: .1; } }
+     @-o-keyframes blink_btn { 0% { opacity: .1; } 50% { opacity: 1; } 100% { opacity: .1; } }
+        @keyframes blink_btn { 0% { opacity: .1; } 50% { opacity: 1; } 100% { opacity: .1; } }
+
+        
+.slaider__btn {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 1;
+}
+
+.slaider__btn:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+  opacity: 1;
+}
+
+.slaider__btn-left:hover {
+  background: linear-gradient(90deg, rgb(243, 211, 211), rgba(0,255,0,0) 63%);
+}
+
+.slaider__btn-left {
+  animation: 3s linear 1s infinite running blink_btn;
+  left: 0;
+  background: linear-gradient(90deg, rgb(184, 184, 184), rgba(0,255,0,0) 63%);
+}
+
+.slaider__btn-right {
+  animation: 3s linear 1s infinite running blink_btn;
+  right: 0;
+  background: linear-gradient(-90deg, rgb(184, 184, 184), rgba(0,255,0,0) 63%);
+}
+
+.slaider__btn-right:hover {
+  background: linear-gradient(-90deg, rgb(243, 211, 211), rgba(0,255,0,0) 63%);
+}
+
+.slaider-inline__item {
+  width: 50px;
+  height: 4px;
+  background-color: rgba(153, 148, 148, 0.521);
+}
+
+.slaider-inline__item:hover {
+  cursor: pointer;
+}
+
+.slaider-inline__item_active {
+  background-color: rgb(255, 255, 255);
+}
+
+.slaider-inline-btns {
+  display: flex;
+  width: 220px;
+  padding: 100px 0 0 0;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.pop-up-preloder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  max-width: 1170px;
+  padding: 50px 10px 0 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__box {
+  align-items: center;
+  text-align: center;
+}
+
+.content__box--text {
+  max-width: 380px;
+  margin: 0 auto;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.content__box__table {
+  margin: 0 auto;
+  max-width: 380px;
+}
+
+.content__box__table_header {
+  text-align: left;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.content__box__table--item {
+  margin: 10px 0 0 0;
+}
+
+.content__box__table--item a {
+  color: #5c3c80;
+}
+
+.content__box__table--item a:hover {
+  color: rgb(0, 0, 255);
+}
+
+.info {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.info__container {
+  margin: 0 auto;
+  display: flex;
+}
+
+.info__item {
+}
+
+.info__social-img {
+  width: 50px;
+  height: 50px;
+  background: url('../img/social.png') no-repeat;
+}
+.info__social-img_mail {
+  background-position: -220px -220px;
+}
+
+.info__social-img_phone {
+  background-position: -122px -30px;
+}
+
+.info__social-img_social {
+  background-position: -30px -120px;
+}
+
+.info__social-img_hh {
+  background-position: -30px -220px;
+}
+
+.skills-list {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 50px 0 50px 0;
+}
+
+.skills-list__item {
+  margin: 25px;
+}
+.portfolio-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px 10px 20px 10px;
+}
+.projects {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.projects__item {
+  margin: 20px 0 0 0;
+}
+
+.projects__item img {
+  width: 280px;
+  margin: 0 auto;
+  display: block;
+  transition: 1s;
+  transform: scale(1);
+}
+
+.projects__item img:hover {
+  cursor: pointer;
+  transform: scale(2);
+}
+
+.project__link:hover {
+  cursor: pointer;
+}
+
+.back-arrow {
+  width: 50px;
+  height: 20px;
+  display: block;
+  position: sticky;
+  top: 30px;
+  left: 100px;
+  background: url('../img/back-arrow.png') no-repeat;
+  background-size: contain;
+}
