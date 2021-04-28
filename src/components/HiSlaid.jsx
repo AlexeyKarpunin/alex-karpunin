@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../css/showButton.css';
 
-export default function HiSlaid () {
+export default function HiSlaid ({showContentFunc}) {
   const [hoverStatus, setHoverStatus] = useState(false);
   const [portfolioStatus, setPortfolioStatus] = useState(false);
 
@@ -10,8 +10,9 @@ export default function HiSlaid () {
   function HendelHover () {setHoverStatus(true)}
   function hendelOut () {setHoverStatus(false)}
   function showPortfolio () {
-    setPortfolioStatus(true)
-    sessionStorage.setItem('preview', 'true');
+    setPortfolioStatus(true);
+    showContentFunc(true);
+    setTimeout( () => sessionStorage.setItem('preview', 'true'), 500 )
   }
 
   return (
